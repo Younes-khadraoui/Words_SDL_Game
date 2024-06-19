@@ -36,7 +36,7 @@ struct MText* createText(TTF_Font* font, SDL_Renderer* renderer,const char* text
 	mText->srcRect = srcRest;
 	mText->desRect = desRect;
 	mText->texture = texture;
-	strcpy_s(mText->text,100, text);
+	strcpy(mText->text, text);
 	return mText;
 }
 

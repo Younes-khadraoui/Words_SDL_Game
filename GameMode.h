@@ -33,6 +33,7 @@ struct Button* createButton(const char * text,int x,int y,int w,int h,int id) {
 	button->rect.w = w;
 	button->rect.h = h;
 	button->id = id;
+    return button;
 }
 
 void drawButton(struct Button* button) {

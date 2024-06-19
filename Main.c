@@ -1,7 +1,7 @@
 #define SDL_MAIN_HANDLED
 #include <SDL2/SDL.h>
-#include<SDL2/SDL_mixer.h>
-#include<SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
+#include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -127,7 +127,7 @@ int main(int argc, char* args[])
                 // update after 1 second
                 if (time_taken > previousTimeTaken + 1) {
                     char timeChars[100];
-                    sprintf_s(timeChars, 100, "Time: %.fs", time_taken);
+                    snprintf(timeChars, sizeof(timeChars), "Time: %.fs", time_taken);
                     timeText = createText(MAIN_FONT, renderer, timeChars, 500, 40);
                     previousTimeTaken = time_taken;
                 }
@@ -160,9 +160,3 @@ int main(int argc, char* args[])
     SDL_Quit();
     return 0;
 }
-
-
-
-
-
-// problems * timer doesnt stop on pause
